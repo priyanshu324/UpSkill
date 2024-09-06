@@ -5,11 +5,11 @@ import FIcon from "react-native-vector-icons/FontAwesome"
 const Register = ({ navigation }) => {
   return (
     <View style={styles.container}>
-        <View>
-          <TouchableOpacity onPress={() => navigation.navigate('Login')}>
-            <FIcon name="chevron-left" style={styles.icon} />
-          </TouchableOpacity>
-        </View>
+      <View>
+        <TouchableOpacity onPress={() => navigation.navigate('Login')}>
+          <FIcon name="chevron-left" style={styles.icon} />
+        </TouchableOpacity>
+      </View>
       <View style={styles.heading}>
         <Text style={{ fontFamily: "Mulish", fontSize: 22, fontWeight: 'bold', letterSpacing: 1, color: "#000", left: 100, }}>Create Account</Text>
         <Text style={{ fontFamily: "Mulish", fontSize: 12, fontWeight: 500, letterSpacing: 1, color: "#707B81", left: 90, }}>Let’s Create Account Together</Text>
@@ -45,7 +45,7 @@ const Register = ({ navigation }) => {
       <View>
         <TouchableOpacity style={styles.button_1}>
           <FIcon name='google' style={styles.icon_1} />
-          <Text style={{ left: 45, }}>Sign Up With Google</Text>
+          <Text style={{ left: 45, color: "#000" }}>Sign Up With Google</Text>
         </TouchableOpacity>
       </View>
 

@@ -21,7 +21,7 @@ const HomeScreen = ({ navigation }) => {
                 </View>
             </View>
             <View>
-                <TouchableOpacity style={styles.search_btn}>
+                <TouchableOpacity style={styles.search_btn} onPress={() => navigation.navigate('Search')}>
                     <TextInput placeholder='Search Course ' style={styles.serach} placeholderTextColor={"#000"} />
                     <FIcon name='search' style={styles.icon_1} />
                 </TouchableOpacity>
@@ -65,6 +65,9 @@ const HomeScreen = ({ navigation }) => {
                     <View style={{ flexDirection: "row" }}>
                         <View>
                             <TouchableOpacity style={styles.course} onPress={() => navigation.navigate('CourseDetails')}>
+                                <TouchableOpacity style={styles.heart}>
+                                    <FIcon name='heart-o' size={20} color={"#000"} style={styles.heart_1} />
+                                </TouchableOpacity>
                                 <Image source={require('../../../assets/course.png')} style={styles.image} />
                                 <TouchableOpacity style={styles.col} onPress={() => navigation.navigate('CourseDetails')}>
                                     <Text style={styles.text}>
@@ -322,20 +325,14 @@ const styles = StyleSheet.create({
     link: {
         top: 80,
         left: 190,
-        backgroundColor: "#000",
-        width: 60,
-        borderRadius: 20,
     },
     link_1: {
         top: 30,
         left: 260,
-        backgroundColor: "#000",
-        width: 60,
-        borderRadius: 20,
     },
     course: {
-        width: 220,
-        height: 140,
+        width: 240,
+        height: 160,
         backgroundColor: "#8EC7FD",
         top: 100,
         left: 10,
@@ -343,8 +340,8 @@ const styles = StyleSheet.create({
         borderTopRightRadius: 20,
     },
     course_1: {
-        width: 220,
-        height: 140,
+        width: 240,
+        height: 160,
         backgroundColor: "#8EC7FD",
         top: 100,
         left: 20,
@@ -352,8 +349,8 @@ const styles = StyleSheet.create({
         borderTopRightRadius: 20,
     },
     course_2: {
-        width: 220,
-        height: 140,
+        width: 240,
+        height: 160,
         backgroundColor: "#8EC7FD",
         top: 100,
         left: 30,
@@ -373,14 +370,13 @@ const styles = StyleSheet.create({
 
     image: {
         alignSelf: "center",
-        top: 20,
+        // top: 20,
         height: 100,
     },
     col: {
         backgroundColor: "#dbd9d9",
-        width: 220,
-        height: 90,
-        top: 10,
+        width: 240,
+        height: 100,
         borderBottomRightRadius: 20,
         borderBottomLeftRadius: 20,
     },
@@ -467,4 +463,17 @@ const styles = StyleSheet.create({
         top: 10,
         borderBottomLeftRadius: 15,
     },
+    heart: {
+        borderWidth: 1,
+        borderRadius: 50,
+        width: 40,
+        height: 40,
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: "#fff",
+        top: 10,
+        left: 5
+
+    },
+
 })
