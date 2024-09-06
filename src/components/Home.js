@@ -3,7 +3,10 @@ import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import MIcon_1 from "react-native-vector-icons/MaterialCommunityIcons"
 import HomeScreen from './screens/HomeScreen';
-import Register from '../screens/auth/Register';
+import Search from './screens/Search';
+import FIcon from "react-native-vector-icons/FontAwesome"
+import Favourite from './screens/Favourite';
+import Profile from './screens/Profile';
 
 
 const Tab = createBottomTabNavigator();
@@ -15,13 +18,25 @@ function TabScreen() {
       <Tab.Screen name="HomeScreen" component={HomeScreen} options={{
         title: 'Home',
         tabBarIcon: () => {
-          return <MIcon_1 name='home' />;
+          return <MIcon_1 name='home-outline' color={"#000"} size={30} />;
         }
       }} />
-      <Tab.Screen name="Register" component={Register} options={{
-        title: 'Home',
+      <Tab.Screen name="Search" component={Search} options={{
+        title: 'Search',
         tabBarIcon: () => {
-          return <MIcon_1 name='home' />;
+          return <FIcon name='search' color={"#000"} size={25} />;
+        }
+      }} />
+      <Tab.Screen name="Favourite" component={Favourite} options={{
+        title: 'Favourite',
+        tabBarIcon: () => {
+          return <FIcon name='heart-o' color={"#000"} size={25} />;
+        }
+      }} />
+      <Tab.Screen name="Profile" component={Profile} options={{
+        title: 'Profile',
+        tabBarIcon: () => {
+          return <FIcon name='user-o' color={"#000"} size={25} />;
         }
       }} />
 

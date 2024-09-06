@@ -38,8 +38,8 @@ const Login = ({ navigation }) => {
 
       <View>
         <TouchableOpacity style={styles.button_1}>
-          <FIcon name='google' style={styles.icon_1} />
-          <Text style={{ left: 45, }}>Sign In With Google</Text>
+          <FIcon name='google' style={styles.icon_1}   />
+          <Text style={{ left: 45, color: "#000" }}>Sign In With Google</Text>
         </TouchableOpacity>
       </View>
 
